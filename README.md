@@ -1,6 +1,5 @@
 # Dự án Huấn luyện PhoWhisper (Speech-To-Text Vietnamese)
 
-Dự án này cung cấp mã nguồn chuẩn hóa dựa trên môi trường Kaggle để tinh chỉnh (fine-tune) mô hình **PhoWhisper** trên tập dữ liệu tiếng Việt cá nhân một cách tối ưu bộ nhớ.
 
 ---
 
@@ -24,7 +23,7 @@ pip install -r requirements.txt
 
 ---
 
-## 📁 Cấu trúc Thư mục Dự án
+##  Cấu trúc Thư mục Dự án
 
 ```
 Phowhisper_Model/
@@ -51,7 +50,7 @@ Phowhisper_Model/
 
 ---
 
-## 📝 Định dạng Dữ liệu Đầu vào (CSV)
+##  Định dạng Dữ liệu Đầu vào (CSV)
 
 Các file CSV (`train.csv`, `val.csv`, `test.csv`) cần tuân thủ cấu trúc cột sau:
 *   Cột chứa tên file âm thanh: **`tên file`** (Chỉ cần điền tên file, ví dụ: `audio1.mp3`, script sẽ tự quét đệ quy thư mục `data/` để tìm đường dẫn đầy đủ).
@@ -65,7 +64,7 @@ FPTOpenSpeechData_Set001_V0.1_010517.wav,nét son ấy được khơi mào vẽ 
 
 ---
 
-## 🚀 Hướng dẫn Chạy Dự án
+##  Hướng dẫn Chạy Dự án
 
 ### 1. Chạy Huấn luyện (Training)
 Lệnh huấn luyện sẽ tự động dọn dẹp cache GPU, tải mô hình và tiến hành huấn luyện.
@@ -98,7 +97,7 @@ Kết quả đánh giá chi tiết sẽ được tự động lưu vào file JSO
 
 ---
 
-## ⚙️ Cấu hình Tùy chỉnh (`src/config.py`)
+##  Cấu hình Tùy chỉnh (`src/config.py`)
 Mọi cài đặt huấn luyện nâng cao có thể dễ dàng chỉnh sửa tại [config.py](file:///d:/Quan/Phowhisper_Model/src/config.py):
 *   `MODEL_NAME`: Mô hình nền tảng gốc (`vinai/PhoWhisper-small` hoặc `vinai/PhoWhisper-medium`).
 *   `BATCH_SIZE` & `GRADIENT_ACCUMULATION_STEPS`: Chỉnh sửa phù hợp với VRAM card đồ họa của bạn.
